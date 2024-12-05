@@ -556,14 +556,14 @@ video{
     border-radius: 15px;
     border: 5px solid #fff;
     box-shadow: 0px 4px 10px rgba(20, 17, 17, 0.2);
-    padding: 78px;
+    padding: 5%;
     text-align: center;
     position: relative;
     overflow: hidden;
     color: #121111;
     font-family: 'Arial', sans-serif;
     margin: 20px;
-    min-height: 300px; /* Asegura que el contenedor tenga altura mínima */
+    min-height: 20vh; /* Asegura que el contenedor tenga altura mínima */
 }
 
 .platillo[data-platillo="promo"] h2 {
@@ -638,6 +638,7 @@ video{
     justify-content: center;
     gap: 10px;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .platillo[data-platillo="promo"]:before {
@@ -701,6 +702,37 @@ video{
     content: '🎄'; /* Árbol de Navidad */
     margin-right: 8px; /* Espaciado entre el icono y el texto */
     font-size: 1.4rem; /* Tamaño del icono */
+}
+
+
+
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+    .platillo[data-platillo="promo"] {
+        padding: 20px; /* Reduce el padding */
+        min-height: 200px; /* Reduce la altura mínima */
+    }
+
+    .platillo[data-platillo="promo"] h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del texto */
+    }
+
+    .platillo[data-platillo="promo"] p {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+
+    .platillo[data-platillo="promo"] img {
+        width: 80%; /* Asegura que la imagen no sea demasiado grande */
+    }
+}
+
+/* Pantallas medianas */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .platillo[data-platillo="promo"] {
+        padding: 40px; /* Ajusta el padding */
+        min-height: 250px; /* Ajusta la altura mínima */
+    }
 }
 
 
